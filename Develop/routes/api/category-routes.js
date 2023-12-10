@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product } = require('../../models');
+const { Category } = require('../../models');
 
 // The `/api/categories` endpoint
 
@@ -88,9 +88,6 @@ router.delete('/categories/:id', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-
-
-module.exports = router;
 
 
 module.exports = router;
