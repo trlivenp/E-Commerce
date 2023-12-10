@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: false }) // Set force to true if you want to drop and recreate tables on every server start
+sequelize.sync({ force: true }) // Set force to true if you want to drop and recreate tables on every server start
   .then(() => {
     console.log('Sequelize models synced to the database');
 
